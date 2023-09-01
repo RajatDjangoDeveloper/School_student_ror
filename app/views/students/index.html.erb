@@ -1,0 +1,20 @@
+<h1>index student</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Stu Id</th>
+        <th>Stu name</th>
+        <th>Stu Mobile No</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @students.each do |stu| %> 
+      <tr>
+        <td><%= stu.id %></td>
+        <td><%= stu.scl_names %></td>
+        <td><%= Stu.scl_mob_no%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>

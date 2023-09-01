@@ -1,0 +1,15 @@
+<h1>Edit School</h1>
+<%= form_with model: @student do |form| %>
+<%# form_with model: school do |form| %>
+<%# form_with url: new_school_path, method: :get do |form| %>
+  <div>
+    <%= form.label :stu_name %>
+    <%= form.text_field :stu_name %>
+  </div>
+  <div>
+    <%= form.label :stu_mob_no %>
+    <%= form.text_field :stu_mob_no %>
+  </div>
+  <%= form.submit %>
+<% end %>
+<%= link_to "Back School", root_path %>

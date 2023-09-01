@@ -1,0 +1,25 @@
+<h4> School Name <%= @school.scl_names%></h4>
+<h4> School Name <%= @school.scl_mob_no%></h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nmae</th>
+      <th>Mobile No</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @students.each do |stu| %>
+    <tr>
+      <td><%= stu.id %></td>
+      <td><%= stu.stu_name %></td>
+      <td><%= stu.stu_mob_no %></td>
+      <td><%= link_to "Edit", edit_student_path(stu) %></td>
+      <td><%= link_to "View", student_path(stu) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to "Back School", root_path %>

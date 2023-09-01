@@ -1,0 +1,15 @@
+<h1>Add School</h1>
+<%= form_with model: @school do |form| %>
+<%# form_with model: school do |form| %>
+<%# form_with url: new_school_path, method: :get do |form| %>
+  <div>
+    <%= form.label :scl_names %>
+    <%= form.text_field :scl_names %>
+  </div>
+  <div>
+    <%= form.label :scl_mob_no %>
+    <%= form.text_field :scl_mob_no %>
+  </div>
+  <%= form.submit %>
+<% end %>
+<%= link_to "Back School", root_path %>

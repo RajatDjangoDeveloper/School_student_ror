@@ -1,0 +1,28 @@
+<h1>school index</h1>
+<%= link_to "Create School", new_school_path %>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Scl Id</th>
+        <th>Scl name</th>
+        <th>Scl Mobile No</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @schools.each do |scl| %>
+      <tr>
+        <td><%= scl.id %></td>
+        <td><%= scl.scl_names %></td>
+        <td><%= scl.scl_mob_no%></td>
+        <td><%= link_to "Edit", edit_school_path(scl) %></td>
+        <td><%= link_to "View", school_path(scl) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  
+
